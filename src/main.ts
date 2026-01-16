@@ -1,14 +1,14 @@
 import { addItem } from './add-item';
+import { dog } from './aided/dog';
+import { parseArg } from './aided/parse';
+import { qqi } from './aided/qqi';
 import { choose } from './choose';
 import { commandParameters } from './data/commandParameters';
 import { delItem } from './del-item';
-import { dog } from './aided/dog';
 import { editItem } from './edit-item';
 import { list } from './list';
 import { manageVisible } from './manageVisible';
-import { parseArg } from './aided/parse';
 import { reset } from './reset';
-import { qqi } from './aided/qqi';
 
 /**  主程序  */
 export async function main() {

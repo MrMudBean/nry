@@ -1,4 +1,4 @@
-import { CommandParameters } from 'src/types';
+import { CommandParameters } from '../types';
 
 /**  用户启动命令参数  */
 export const commandParameters: CommandParameters = {

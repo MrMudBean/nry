@@ -1,12 +1,16 @@
+import { question } from 'a-command';
 import { escapeRegExp } from 'a-js-tools';
 import { isUndefined } from 'a-type-of-js';
 import { greenPen, cyanPen } from 'color-pen';
-import { command } from 'src/aided/command';
-import { dataStore } from 'src/data';
-import { dog } from 'src/aided/dog';
-import { LocalConfig } from 'src/types';
-import { exitProgram } from 'src/aided/utils';
-/**  获取 label  */
+import { dog } from '../aided/dog';
+import { exitProgram } from '../aided/utils';
+import { dataStore } from '../data/index';
+import { LocalConfig } from '../types';
+
+/**
+ *  获取 label
+ * @param originData
+ */
 export async function getLabel(originData: LocalConfig) {
   const valueVerify: { reg: RegExp; info: string; inverse?: boolean }[] = [
     {
@@ -26,7 +30,7 @@ export async function getLabel(originData: LocalConfig) {
     });
   });
 
-  const value = await command.question({
+  const value = await question({
     text: `请输入自定义的 ${pkgManager} 的别名`,
     tip: '任意别名',
     minLen: 1,

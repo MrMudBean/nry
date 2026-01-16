@@ -1,8 +1,8 @@
-import { CommandParameters } from '../types';
 import { isFalse, isUndefined } from 'a-type-of-js';
 import { commandParameters } from '../data/commandParameters';
-import { dog } from './dog';
+import { CommandParameters } from '../types';
 import { command } from './command';
+import { dog } from './dog';
 
 /**  解析参数  */
 export function parseArg() {

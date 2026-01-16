@@ -29,16 +29,15 @@ if ! pnpm run build; then
 fi
 
 # 切换到构建目录
-if [ ! -d "build" ]; then 
-  echo "未找到 build 构建码"
+if [ ! -d "dist" ]; then 
+  echo "未找到 dist 构建码"
   exit 0
 fi
 
 # 确保脚本在遇见错误时立即退出
 set -e
 
-cd "build"
-
+cd "dist"
 echo "开始发布 npm 包 ${tag} 版本"
 if ! pnpm publish --provenance --access public --tag "${tag}"  --no-git-checks; then
     echo "发布失败" 

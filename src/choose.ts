@@ -1,12 +1,24 @@
 import { SelectionParamObjectData } from 'a-command';
-import { _p, runOtherCode } from 'a-node-tools';
-import { bluePen, greenPen, magentaPen } from 'color-pen';
-import { dataStore } from 'src/data';
-import { exitProgram, isCanConnect, mustEndWithSlash } from 'src/aided/utils';
-import { dog } from 'src/aided/dog';
+import { runOtherCode, _p } from 'a-node-tools';
+import { magentaPen, greenPen, bluePen } from 'color-pen';
+import { dog } from './aided/dog';
+import { mustEndWithSlash, isCanConnect, exitProgram } from './aided/utils';
+import { dataStore } from './data/index';
+import { getTarget } from './getTarget';
 
-/**  设置新的  */
-export async function setNewRegistry(item: SelectionParamObjectData<string>) {
+/**  挑选一个域  */
+export async function choose() {
+  /**  获取靶  */
+  const target = await getTarget();
+
+  await setNewRegistry(target);
+}
+
+/**
+ *  设置新的
+ * @param item
+ */
+async function setNewRegistry(item: SelectionParamObjectData<string>) {
   const { pkgManager } = dataStore;
 
   const registry = mustEndWithSlash(item.value);

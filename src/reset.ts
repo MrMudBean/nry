@@ -1,11 +1,11 @@
+import { question } from 'a-command';
+import { typewrite } from 'a-node-tools';
 import { isUndefined } from 'a-type-of-js';
+import { greenPen } from 'color-pen';
 import { qqi } from './aided/qqi';
 import { exitProgram } from './aided/utils';
 import { getOriginData } from './data/getOriginData';
 import { list } from './list';
-import { typewrite } from 'a-node-tools';
-import { greenPen } from 'color-pen';
-import { command } from './aided/command';
 
 /**  重制项  */
 export async function reset() {
@@ -13,7 +13,7 @@ export async function reset() {
     return await exitProgram('当前读写权限受限，正在退出程序');
   const tip = ['退出', '重置'];
 
-  const result = await command.question({
+  const result = await question({
     text: '请确认是否执行覆盖原数据，该操作无法复原',
     tip,
   });

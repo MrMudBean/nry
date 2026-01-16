@@ -1,15 +1,15 @@
-import { getOriginData } from 'src/data/getOriginData';
-import { getValue } from './inputValue';
-import { localAdd } from 'src/data/localAdd';
-import { getLabel } from './inputLabel';
-import { qqi } from 'src/aided/qqi';
-import { exitProgram } from 'src/aided/utils';
-import { brightBlackPen, brightRedPen } from 'color-pen';
-import { list } from 'src/list';
+import { question } from 'a-command';
 import { _p } from 'a-node-tools';
 import { isUndefined } from 'a-type-of-js';
-import { dataStore } from 'src/data';
-import { command } from 'src/aided/command';
+import { brightBlackPen, brightRedPen } from 'color-pen';
+import { qqi } from '../aided/qqi';
+import { exitProgram } from '../aided/utils';
+import { getOriginData } from '../data/getOriginData';
+import { dataStore } from '../data/index';
+import { localAdd } from '../data/localAdd';
+import { list } from '../list';
+import { getLabel } from './inputLabel';
+import { getValue } from './inputValue';
 
 /**  添加新的项  */
 export async function addItem() {
@@ -27,7 +27,7 @@ export async function addItem() {
     _p(brightBlackPen`当前的 ${pkgManager} registry 源列表为`);
     await list();
     const tip = ['退出', '继续添加'];
-    const result = await command.question({
+    const result = await question({
       text: '添加完成，是否持续添加',
       tip,
     });

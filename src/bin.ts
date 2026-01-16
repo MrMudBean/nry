@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { dog } from 'src/aided/dog';
-import { main } from './src/main';
+import { dog } from './aided/dog';
+import { main } from './main';
 
 (async () => {
   try {

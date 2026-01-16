@@ -1,11 +1,11 @@
+import { selection } from 'a-command';
 import { isUndefined } from 'a-type-of-js';
-import { getOriginData } from './data/getOriginData';
+import { dog } from './aided/dog';
 import { qqi } from './aided/qqi';
 import { exitProgram } from './aided/utils';
-import { dog } from './aided/dog';
+import { getOriginData } from './data/getOriginData';
 import { getCurrentRegistry } from './getCurrentRegistry';
 import { list } from './list';
-import { command } from './aided/command';
 
 /**  当前可见性的更改  */
 export async function manageVisible() {
@@ -15,7 +15,7 @@ export async function manageVisible() {
   /**  当前设置项  */
   const currentValue = await getCurrentRegistry();
 
-  const result = await command.selection(
+  const result = await selection(
     {
       data: originData.map(e => ({
         ...e,

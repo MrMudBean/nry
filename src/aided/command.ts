@@ -1,8 +1,8 @@
-import { Command } from 'a-command';
+import { Args } from 'a-command';
 import { brightCyanPen, brightRedPen } from 'color-pen';
-import { dun } from 'src/aided/dog';
+import { dun } from './dog';
 
-const command = new Command<{
+const command = new Args<{
   add: undefined;
   edit: undefined;
   delete: undefined;

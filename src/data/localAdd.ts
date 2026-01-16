@@ -1,9 +1,10 @@
 import { SelectionParamObjectData } from 'a-command';
-import { qqi } from 'src/aided/qqi';
-import { mustEndWithSlash } from 'src/aided/utils';
+import { qqi } from '../aided/qqi';
+import { mustEndWithSlash } from '../aided/utils';
 
 /**
  *
+ * @param item
  */
 export function localAdd(item: SelectionParamObjectData<string>) {
   // 读写受限

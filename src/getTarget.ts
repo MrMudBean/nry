@@ -1,14 +1,13 @@
-import { SelectionParamObjectData } from 'a-command';
+import { selection, SelectionParamObjectData } from 'a-command';
 import { isUndefined, isFalse, isBusinessEmptyString } from 'a-type-of-js';
 import { magentaPen } from 'color-pen';
-import { getOriginData } from 'src/data/getOriginData';
-import { localAdd } from 'src/data/localAdd';
-import { dog } from 'src/aided/dog';
-import { getCurrentRegistry } from 'src/getCurrentRegistry';
-import { qqi } from 'src/aided/qqi';
-import { exitProgram } from 'src/aided/utils';
+import { dog } from './aided/dog';
+import { qqi } from './aided/qqi';
+import { exitProgram } from './aided/utils';
 import { dataStore } from './data';
-import { command } from './aided/command';
+import { getOriginData } from './data/getOriginData';
+import { localAdd } from './data/localAdd';
+import { getCurrentRegistry } from './getCurrentRegistry';
 
 /**
  * 获得要编辑的项
@@ -69,7 +68,7 @@ export async function getTarget(
         return e;
       });
   /**  选择交互  */
-  const result = await command.selection(
+  const result = await selection(
     {
       data,
       info,

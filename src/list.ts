@@ -1,10 +1,10 @@
-import { brightBlackPen, greenPen, magentaPen } from 'color-pen';
-import { getOriginData } from './data/getOriginData';
-import { Table } from 'colored-table';
 import { _p } from 'a-node-tools';
-import { getCurrentRegistry } from './getCurrentRegistry';
 import { isString } from 'a-type-of-js';
+import { brightBlackPen, greenPen, magentaPen } from 'color-pen';
+import { Table } from 'colored-table';
 import { dataStore } from './data';
+import { getOriginData } from './data/getOriginData';
+import { getCurrentRegistry } from './getCurrentRegistry';
 
 /**
  *

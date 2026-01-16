@@ -1,18 +1,19 @@
+import { question } from 'a-command';
 import { escapeRegExp } from 'a-js-tools';
+import { _p } from 'a-node-tools';
 import { isUndefined } from 'a-type-of-js';
 import { greenPen, cyanPen, reversedPen } from 'color-pen';
-import { command } from 'src/aided/command';
-import { dataStore } from 'src/data';
-import { dog } from 'src/aided/dog';
-import { LocalConfig } from 'src/types';
-import { exitProgram, isCanConnect, mustEndWithSlash } from 'src/aided/utils';
-import { originRegistryList } from 'src/data/origin-registry-list';
-import { _p } from 'a-node-tools';
+import { dog } from '../aided/dog';
+import { exitProgram, isCanConnect, mustEndWithSlash } from '../aided/utils';
+import { dataStore } from '../data/index';
+import { originRegistryList } from '../data/origin-registry-list';
+import { LocalConfig } from '../types';
 
 const { npm, yarn } = originRegistryList;
 
 /**
  * 获取用户输入的数据
+ * @param originData
  */
 export async function getValue(originData: LocalConfig) {
   const { pkgManager } = dataStore;
@@ -32,7 +33,7 @@ export async function getValue(originData: LocalConfig) {
     });
   });
 
-  const value = await command.question({
+  const value = await question({
     text: '请输入自定义的源地址',
     tip: pkgManager === 'yarn' ? yarn : npm,
     minLen: 5,
