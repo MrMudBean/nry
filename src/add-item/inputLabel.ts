@@ -1,7 +1,7 @@
-import { question } from 'a-command';
-import { escapeRegExp } from 'a-js-tools';
-import { isUndefined } from 'a-type-of-js';
-import { greenPen, cyanPen } from 'color-pen';
+import { question } from '@vvi/command';
+import { escapeRegExp } from '@vvi/utils';
+import { isUndefined } from '@vvi/is';
+import { greenPen, cyanPen } from '@vvi/pen';
 import { dog } from '../aided/dog';
 import { exitProgram } from '../aided/utils';
 import { dataStore } from '../data/index';

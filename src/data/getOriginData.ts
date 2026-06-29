@@ -1,5 +1,5 @@
 import { unlinkSync } from 'node:fs';
-import { isArray, isBusinessEmptyString, isString } from 'a-type-of-js';
+import { isArray, isBusinessEmptyString, isString } from '@vvi/is';
 
 import { QQI } from 'qqi';
 import { dog } from '../aided/dog';

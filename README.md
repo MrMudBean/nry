@@ -14,7 +14,7 @@ npm install -g nry
 
 ## 使用
 
-本应用使用 [a-command](https://www.npmjs.com/package/a-command) ，所以屏蔽了 `Ctrl + C` 、`Ctrl + D` ，但可采用*双击 `Esc` 退出*。
+本应用使用 [@vvi/command](https://www.npmjs.com/package/@vvi/command) ，所以屏蔽了 `Ctrl + C` 、`Ctrl + D` ，但可采用*双击 `Esc` 退出*。
 
 执行能力可能根据当前执行的包管理器有关，
 
@@ -34,6 +34,8 @@ npm install -g nry
 
 相应的，对应的包管理器调用执行仅用于设置本包管理器的 `registry`。
 
-## 文档地址
+## 状态
 
-参看 [nry](https://earthnut.dev/npm/nry)
+此软件包是 `MrMudBean` 生态系统的一部分。
+它使用严格的 TypeScript 编写，并通过 Rollup 构建进行验证。
+虽然单元测试较少，但 API 稳定，并在生产环境中大量使用。

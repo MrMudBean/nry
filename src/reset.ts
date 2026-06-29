@@ -1,7 +1,7 @@
-import { question } from 'a-command';
-import { typewrite } from 'a-node-tools';
-import { isUndefined } from 'a-type-of-js';
-import { greenPen } from 'color-pen';
+import { question } from '@vvi/command';
+import { typewrite } from '@vvi/node';
+import { isUndefined } from '@vvi/is';
+import { greenPen } from '@vvi/pen';
 import { qqi } from './aided/qqi';
 import { exitProgram } from './aided/utils';
 import { getOriginData } from './data/getOriginData';

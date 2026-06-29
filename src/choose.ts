@@ -1,6 +1,6 @@
-import { SelectionParamObjectData } from 'a-command';
-import { runOtherCode, _p } from 'a-node-tools';
-import { magentaPen, greenPen, bluePen } from 'color-pen';
+import { SelectionParamObjectData } from '@vvi/command';
+import { runOtherCode, _p } from '@vvi/node';
+import { magentaPen, greenPen, bluePen } from '@vvi/pen';
 import { dog } from './aided/dog';
 import { mustEndWithSlash, isCanConnect, exitProgram } from './aided/utils';
 import { dataStore } from './data/index';

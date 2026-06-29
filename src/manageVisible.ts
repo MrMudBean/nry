@@ -1,5 +1,5 @@
-import { selection } from 'a-command';
-import { isUndefined } from 'a-type-of-js';
+import { selection } from '@vvi/command';
+import { isUndefined } from '@vvi/is';
 import { dog } from './aided/dog';
 import { qqi } from './aided/qqi';
 import { exitProgram } from './aided/utils';

@@ -1,6 +1,6 @@
-import { selection, SelectionParamObjectData } from 'a-command';
-import { isUndefined, isFalse, isBusinessEmptyString } from 'a-type-of-js';
-import { magentaPen } from 'color-pen';
+import { selection, SelectionParamObjectData } from '@vvi/command';
+import { isUndefined, isFalse, isBusinessEmptyString } from '@vvi/is';
+import { magentaPen } from '@vvi/pen';
 import { dog } from './aided/dog';
 import { qqi } from './aided/qqi';
 import { exitProgram } from './aided/utils';

@@ -1,4 +1,4 @@
-import { runOtherCode } from 'a-node-tools';
+import { runOtherCode } from '@vvi/node';
 import { dog } from './aided/dog';
 import { dataStore } from './data';
 

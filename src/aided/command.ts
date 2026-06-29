@@ -1,5 +1,5 @@
-import { Args } from 'a-command';
-import { brightCyanPen, brightRedPen } from 'color-pen';
+import { Args } from '@vvi/command';
+import { brightCyanPen, brightRedPen } from '@vvi/pen';
 import { dun } from './dog';
 
 const command = new Args<{

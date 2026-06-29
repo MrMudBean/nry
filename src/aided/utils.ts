@@ -1,5 +1,5 @@
-import { cursorShow, typewrite } from 'a-node-tools';
-import { isBusinessEmptyString } from 'a-type-of-js';
+import { cursorShow, typewrite } from '@vvi/node';
+import { isBusinessEmptyString } from '@vvi/is';
 import { command } from './command';
 import { dog } from './dog';
 
@@ -9,7 +9,7 @@ import { dog } from './dog';
  */
 export async function exitProgram(
   str: string = '好的，即将退出',
-): Promise<never> {
+): Promise<any> {
   if (!isBusinessEmptyString(str)) await typewrite(str);
 
   cursorShow();

@@ -1,7 +1,7 @@
-import { _p } from 'a-node-tools';
-import { isString } from 'a-type-of-js';
-import { brightBlackPen, greenPen, magentaPen } from 'color-pen';
-import { Table } from 'colored-table';
+import { _p } from '@vvi/node';
+import { isString } from '@vvi/is';
+import { brightBlackPen, greenPen, magentaPen } from '@vvi/pen';
+import { Table } from '@vvi/table';
 import { dataStore } from './data';
 import { getOriginData } from './data/getOriginData';
 import { getCurrentRegistry } from './getCurrentRegistry';

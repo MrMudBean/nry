@@ -1,6 +1,6 @@
-import { question, SelectionParamObjectData } from 'a-command';
-import { _p } from 'a-node-tools';
-import { isUndefined } from 'a-type-of-js';
+import { question, SelectionParamObjectData } from '@vvi/command';
+import { _p } from '@vvi/node';
+import { isUndefined } from '@vvi/is';
 import { dog } from './aided/dog';
 import { qqi } from './aided/qqi';
 import { exitProgram, mustEndWithSlash } from './aided/utils';

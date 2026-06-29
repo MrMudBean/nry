@@ -1,4 +1,4 @@
-import { isFalse, isUndefined } from 'a-type-of-js';
+import { isFalse, isUndefined } from '@vvi/is';
 import { commandParameters } from '../data/commandParameters';
 import { CommandParameters } from '../types';
 import { command } from './command';

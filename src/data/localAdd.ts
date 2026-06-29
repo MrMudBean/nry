@@ -1,4 +1,4 @@
-import { SelectionParamObjectData } from 'a-command';
+import { SelectionParamObjectData } from '@vvi/command';
 import { qqi } from '../aided/qqi';
 import { mustEndWithSlash } from '../aided/utils';
 

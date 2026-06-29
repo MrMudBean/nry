@@ -1,4 +1,4 @@
-import { detectPackageManager } from 'a-node-tools';
+import { detectPackageManager } from '@vvi/node';
 import { DataStore } from '../types';
 import { commandParameters } from './commandParameters';
 

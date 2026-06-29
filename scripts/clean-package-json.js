@@ -1,5 +1,5 @@
-import { pathJoin, writeJsonFileSync, getPackageJsonSync } from 'a-node-tools';
-import { isNull } from 'a-type-of-js';
+import { pathJoin, writeJsonFileSync, getPackageJsonSync } from '@vvi/node';
+import { isNull } from '@vvi/is';
 import { dirname } from 'node:path';
 
 const packageJsonResponse = getPackageJsonSync();
@@ -16,6 +16,7 @@ let packageJson = packageJsonResponse.content;
   'lint-staged',
   'private',
   'dependencies',
+  'packageManager',
 ].forEach(key => delete packageJson[key]);
 
 packageJson = {
@@ -23,13 +24,19 @@ packageJson = {
   author: {
     name: '泥豆君',
     email: 'Mr.MudBean@outlook.com',
-    url: 'https://earthnut.dev',
+    url: 'https://mudbean.cn',
   },
-  license: 'MIT',
   description: '更替及管理 npm、yarn、pnpm registry',
-  files: ['bin.js', 'LICENSE', 'README.md', 'THIRD-PARTY-LICENSES.txt'],
-  keywords: ['nry', 'npm', 'pnpm', 'yarn', 'registry'],
-  homepage: 'https://earthnut.dev/npm/nry',
+  license: 'MIT',
+  files: [
+    'bin.js',
+    'LICENSE',
+    'README.md',
+    'THIRD-PARTY-LICENSES.txt',
+    'CHANGELOG.md',
+  ],
+  keywords: ['nry', 'npm', 'pnpm', 'yarn', 'registry', 'mudbean', 'vvi'],
+  homepage: 'https://npm.lmssee.com/nry',
   bugs: {
     url: 'https://github.com/MrMudBean/nry/issues',
     email: 'Mr.MudBean@outlook.com',

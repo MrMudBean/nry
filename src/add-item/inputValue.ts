@@ -1,8 +1,8 @@
-import { question } from 'a-command';
-import { escapeRegExp } from 'a-js-tools';
-import { _p } from 'a-node-tools';
-import { isUndefined } from 'a-type-of-js';
-import { greenPen, cyanPen, reversedPen } from 'color-pen';
+import { question } from '@vvi/command';
+import { escapeRegExp } from '@vvi/utils';
+import { _p } from '@vvi/node';
+import { isUndefined } from '@vvi/is';
+import { greenPen, cyanPen, reversedPen } from '@vvi/pen';
 import { dog } from '../aided/dog';
 import { exitProgram, isCanConnect, mustEndWithSlash } from '../aided/utils';
 import { dataStore } from '../data/index';
